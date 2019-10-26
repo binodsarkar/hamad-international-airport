@@ -1,0 +1,250 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hamad.international.airport.activities.MonitoringActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/monAct">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:text="Monitoring Events:"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/monitoringText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:gravity="left|top"
+        android:inputType="none"
+        android:visibility="gone">
+    </EditText>
+
+    <AutoCompleteTextView
+        android:id="@+id/searchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:gravity="left|top"
+        android:visibility="gone"
+        android:hint="Search immigration centre, Lounges, Food court ">
+    </AutoCompleteTextView>
+
+    <Button
+        android:id="@+id/startNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onRangingClicked"
+        android:layout_below="@+id/searchText"
+        android:text="Search and Navigate"
+        android:gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:text="Want to book a cab?"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/bookCab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startNavigation"
+        android:text="Book Now"
+        android:gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/enableButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onEnableClicked"
+        android:layout_below="@+id/monitoringText"
+        android:layout_toRightOf="@id/startNavigation"
+        android:text="Disable monitoring"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Time to immigration"
+            android:layout_weight="10" />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="12:45" />
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="20 min" />
+    </LinearLayout>
+-->
+
+    <TableLayout
+        android:id="@+id/simpleTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"> <!-- stretch the second column of the layout-->
+
+        <!-- first row of the table layout-->
+        <TableRow
+            android:id="@+id/firstRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRangingClicked">
+
+            <!-- first element of the row-->
+            <TextView
+
+                android:id="@+id/simpleTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="12dip"
+                android:text="Time to immigration"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFEB3B"
+                android:padding="12dip"
+                android:text="12:45 pm"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFC107"
+                android:padding="12dip"
+                android:text="20 min"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/secondRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRangingClicked"
+            android:layout_marginTop="1dp">
+
+            <!-- first element of the row-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="12dip"
+                android:text="Time to baggage"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFEB3B"
+                android:padding="12dip"
+                android:text="1:05 pm"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFC107"
+                android:padding="12dip"
+                android:text="30 min"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/thirdRow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onBookCabClicked"
+            android:layout_marginTop="1dp">
+
+            <!-- first element of the row-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#b0b0b0"
+                android:padding="12dip"
+                android:text="Time to curb bay"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFEB3B"
+                android:padding="12dip"
+                android:text="1:35 pm"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFC107"
+                android:padding="12dip"
+                android:text="10 min"
+                android:textColor="#000"
+                android:textSize="14dp" />
+
+        </TableRow>
+    </TableLayout>
+    <View
+        android:id="@+id/toshowsnac"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/fstTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#26B92D"
+        android:padding="12dip"
+        android:text=""
+        android:textColor="#fff"
+        android:textSize="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="200dp"/>
+</LinearLayout>

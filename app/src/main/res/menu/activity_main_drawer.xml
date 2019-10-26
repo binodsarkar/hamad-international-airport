@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+        <!--<item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="DASHBOARD" />-->
+        <item
+            android:id="@+id/profile"
+
+            android:icon="@mipmap/profile"
+
+            android:title="PROFILE" />
+
+        <item
+            android:id="@+id/schedule"
+
+
+            android:icon="@mipmap/history"
+
+            android:title="APPOINTMENT HISTORY" />
+
+
+        <item
+            android:id="@+id/cp"
+            android:icon="@mipmap/changep"
+
+
+            android:title="CHANGE PASSWORD" />
+
+
+        <item
+            android:id="@+id/logout"
+
+
+            android:icon="@mipmap/logout"
+            android:title="LOGOUT" />
+
+
+
+
+
+
+
+
+
+
+
+    </group>
+
+ </menu>
