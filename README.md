@@ -1,6 +1,7 @@
 ## Overview
 
-This is an Android Studio reference app for the AndroidBeaconLibrary
+This is an Android Studio app for the hamad-international-airport describing a basic wireframe.
+We have used altbeacon for distance and MapBox for internal floormapping
 
 ## Project Setup
 
